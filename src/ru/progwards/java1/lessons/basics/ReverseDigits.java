@@ -10,6 +10,7 @@ public class ReverseDigits {
         return number;
     }
        public static void main(String[] args){
+
         reverseDigits(123);
     }
 
