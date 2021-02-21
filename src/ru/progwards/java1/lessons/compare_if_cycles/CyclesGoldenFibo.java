@@ -12,6 +12,7 @@ public class CyclesGoldenFibo {
             number = number / 10;
             if (em == digit)
                 System.out.println(result);
+
         }
         return false;
     }
@@ -30,30 +31,26 @@ public class CyclesGoldenFibo {
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c) {
-        float z1;
-        float z2;
-        float z3;
-        if (a > b)
-            z1 = (float) a / b;
-        else z1 = (float) b / a;
-        if (c > a)
-            z2 = (float) c / a;
-        else z2 = (float) a / c;
-        if (c > b)
-            z3 = (float) c / b;
-        else z3 = (float) b / c;
-//        System.out.println(z1);
-//        System.out.println(z2);
-//        System.out.println(z3);
-        boolean result = (a == c | b == a | c == b) & (1.61703 <= z1 & z1 <= 1.61903 | 1.61703 <= z2 & z2 <= 1.61903 | 1.61703 <= z3 & z3 <= 1.61903);
+        double z1 = 0.0;
+        if (a == b)
+            z1 = (double) a / c;
+        else
+        if (b == c)
+            z1 = (double) b / a;
+        else
+        if (c == a)
+            z1 = (double) c / b;
+        else;
+            boolean result = (1.61703 <= z1 & z1 <= 1.61903);
+        System.out.println(z1);
         System.out.println(result);
         return result;
     }
 
     public static void main(String[] args) {
-        containsDigit(12345, 1);
+        containsDigit(12845, 4);
         fiboNumber(3);
-        isGoldenTriangle(34, 34, 55);
+        isGoldenTriangle(34, 55, 55);
         {
             int n0 = 1;
             int n1 = 1;
