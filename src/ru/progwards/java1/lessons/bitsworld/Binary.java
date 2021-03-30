@@ -5,26 +5,16 @@ public class Binary {
        public Binary(byte num) {
         this.num = num;
     }
-
-    public static String toString(int num) {
-String result = "";
-        System.out.println(result);
-while (num>0){
-    int rema = num%2;
-    System.out.println(rema);
-    result = Integer.toString(rema) + result;
-    num /=2;
-    System.out.println(result);
-}
-if (result.isEmpty())
-    return "0";
-        System.out.println(result);
+    public String toString() {
+        String result = "";
+        for (int i = 0; i<8; i++)
+            result = ((((1<<i) & num) == 0) ? "0" : "1")+ result;
 return result;
-        }
 
+    }
     public static void main(String[] args) {
 Binary abc = new Binary((byte) 15);
         System.out.println(abc.num);
-        toString(127);
-    }
+        System.out.println(new Binary((byte) 45).toString());
+            }
 }
